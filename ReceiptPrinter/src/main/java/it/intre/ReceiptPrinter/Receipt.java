@@ -25,7 +25,7 @@ public class Receipt {
         int taxPercentage=0;
         for(Product product : receipt)
         {
-            if(product.getCategory()=="General");
+            if(product.getCategory()==Category.GENERAL);
             {
                 taxPercentage+=10;
             }

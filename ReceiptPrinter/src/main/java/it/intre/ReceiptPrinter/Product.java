@@ -4,22 +4,22 @@ public class Product {
     private String name;
     private boolean isImported;
     private double price;
-    private String category;
+    private Category category;
     private int quantity;
     private double taxAmount;
     private int taxPercentage;
 
-    public Product(String name,boolean isImported,double price,String category,int quantity,double taxAmount,int taxPercentage){
-        setName(name);
-        setImported(isImported);
-        setPrice(price);
-        setCategory(category);
-        setQuantity(quantity);
-        setTaxAmount(taxAmount);
-        setTaxPercentage(taxPercentage);
+    public Product(String name,boolean isImported,double price,Category category,int quantity,double taxAmount,int taxPercentage){
+        this.name=name;
+        this.isImported=isImported;
+        this.price=price;
+        this.category=category;
+        this.quantity=quantity;
+        this.taxAmount=taxAmount;
+        this.taxPercentage=taxPercentage;
     }
 
-    public Product(String name,boolean isImported,double price,String category,int quantity) {
+    public Product(String name,boolean isImported,double price,Category category,int quantity) {
         this(name,isImported,price,category,quantity,0,0);
     }
 
@@ -35,7 +35,7 @@ public class Product {
         this.price = price;
     }
 
-    private void setCategory(String category) {
+    private void setCategory(Category category) {
         this.category = category;
     }
 
@@ -63,7 +63,7 @@ public class Product {
         return price;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
