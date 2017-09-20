@@ -92,7 +92,7 @@ public class Product {
         if (Double.compare(product.taxAmount, taxAmount) != 0) return false;
         if (taxPercentage != product.taxPercentage) return false;
         if (name != null ? !name.equals(product.name) : product.name != null) return false;
-        return category != null ? category.equals(product.category) : product.category == null;
+        return category == product.category;
     }
 
     @Override
@@ -109,5 +109,18 @@ public class Product {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + taxPercentage;
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", isImported=" + isImported +
+                ", price=" + price +
+                ", category=" + category +
+                ", quantity=" + quantity +
+                ", taxAmount=" + taxAmount +
+                ", taxPercentage=" + taxPercentage +
+                '}';
     }
 }

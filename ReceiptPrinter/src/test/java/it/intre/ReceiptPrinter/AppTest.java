@@ -32,15 +32,51 @@ public class AppTest {
         assertTrue(r.getReceipt().contains(product));
     }
 
-    /*@Test
-    public void calculationOfTaxOfImportedGeneralProductTest()
+
+    private void calculationOfTaxTest(Product productBeforeTax,double expectedPrice,double expectedTaxAmount,int expectedTaxPercentage)
     {
-        Product productBeforeTax = new Product("IPhone X",true, 1400, Category.GENERAL ,1);
-        Product productAfterTax = new Product("IPhone X",true, 1610, Category.GENERAL ,1,210,15);
         Receipt r = new Receipt();
         r.addNewProduct(productBeforeTax);
         r.calculationOfTax();
-        assertTrue(r.getReceipt().contains(productAfterTax));
-    }*/
+        double price = 0;
+        double taxAmount  =0;
+        int taxPercentage = 0;
+        for(Product product : r.getReceipt()) {
+            price=product.getPrice();
+            taxAmount=product.getTaxAmount();
+            taxPercentage=product.getTaxPercentage();
+        }
+        assertEquals(expectedPrice,price,0.001);
+        assertEquals(expectedTaxAmount,taxAmount,0.001);
+        assertEquals(expectedTaxPercentage,taxPercentage);
+    }
+
+    @Test
+    public void calculationOfTaxOfImportedGeneralProductTest()
+    {
+        Product productBeforeTax = new Product("IPhone X",true, 1400, Category.GENERAL ,1);
+        calculationOfTaxTest(productBeforeTax,1610,210,15);
+    }
+
+    @Test
+    public void calculationOfTaxOfNotImportedGeneralProductTest()
+    {
+        Product productBeforeTax = new Product("Orologio Armani",false, 250, Category.GENERAL ,1);
+        calculationOfTaxTest(productBeforeTax,275,25,10);
+    }
+
+    @Test
+    public void calculationOfTaxOfImportedNotGeneralProductTest()
+    {
+        Product productBeforeTax = new Product("Champagne",true, 500, Category.FOOD ,1);
+        calculationOfTaxTest(productBeforeTax,525,25,5);
+    }
+
+    @Test
+    public void calculationOfTaxOfNotImportedNotGeneralProductTest()
+    {
+        Product productBeforeTax = new Product("Barolo Riserva",false, 650, Category.FOOD ,1);
+        calculationOfTaxTest(productBeforeTax,650,0,0);
+    }
 
 }

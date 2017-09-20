@@ -22,20 +22,25 @@ public class Receipt {
 
     public void calculationOfTax()
     {
-        int taxPercentage=0;
-        for(Product product : receipt)
-        {
-            if(product.getCategory()==Category.GENERAL);
+        int taxPercentage = 0;
+        double taxAmount;
+        double price;
+        for(Product product : receipt) {
+            if(product.getCategory() == Category.GENERAL)
             {
-                taxPercentage+=10;
+                taxPercentage += 10;
             }
             if(product.isImported())
             {
-                taxPercentage+=5;
+                taxPercentage += 5;
             }
-            if(taxPercentage!=0)
+            if(taxPercentage != 0)
             {
                 product.setTaxPercentage(taxPercentage);
+                price=product.getPrice();
+                taxAmount = (taxPercentage * price)/100;
+                product.setTaxAmount(taxAmount);
+                product.setPrice(price+taxAmount);
             }
         }
     }
