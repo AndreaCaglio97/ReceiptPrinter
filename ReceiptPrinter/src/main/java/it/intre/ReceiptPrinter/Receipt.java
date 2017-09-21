@@ -20,29 +20,36 @@ public class Receipt {
         receipt.add(product);
     }
 
-    public void calculationOfTax()
+    public double calculationOfTax()
     {
-        int taxPercentage = 0;
-        double taxAmount;
-        double price;
+        double taxAmount=0;
         for(Product product : receipt) {
-            if(product.getCategory() == Category.GENERAL)
-            {
-                taxPercentage += 10;
-            }
-            if(product.isImported())
-            {
-                taxPercentage += 5;
-            }
-            if(taxPercentage != 0)
-            {
-                product.setTaxPercentage(taxPercentage);
-                price=product.getPrice();
-                taxAmount = (taxPercentage * price)/100;
-                product.setTaxAmount(taxAmount);
-                product.setPrice(price+taxAmount);
-            }
+            taxAmount += product.singleProductTax();
         }
+        return taxAmount;
+    }
+
+    public double calculationOfTotal()
+    {
+        double total=0;
+        for(Product product : receipt) {
+            total += product.getPrice();
+        }
+        return total;
+    }
+
+    public void printReceipt()
+    {
+        double taxAmount = calculationOfTax();
+        double total = calculationOfTotal();
+        System.out.println("RECEIPT");
+        System.out.println();
+        for(Product product : receipt) {
+            System.out.println(product.toString());
+        }
+        System.out.println();
+        System.out.println("Total taxes: " + String.format( "%.2f", taxAmount ) + "€");
+        System.out.println("Total:" + String.format( "%.2f", total ) + "€");
     }
 
 }

@@ -1,15 +1,17 @@
 package it.intre.ReceiptPrinter;
 
+import static it.intre.ReceiptPrinter.Rounding.*;
+
 public class Product {
     private String name;
     private boolean isImported;
     private double price;
     private Category category;
     private int quantity;
-    private double taxAmount;
-    private int taxPercentage;
+    /*private double taxAmount;
+    private int taxPercentage;*/
 
-    public Product(String name,boolean isImported,double price,Category category,int quantity,double taxAmount,int taxPercentage){
+    /*public Product(String name,boolean isImported,double price,Category category,int quantity,double taxAmount,int taxPercentage){
         this.name=name;
         this.isImported=isImported;
         this.price=price;
@@ -17,10 +19,15 @@ public class Product {
         this.quantity=quantity;
         this.taxAmount=taxAmount;
         this.taxPercentage=taxPercentage;
-    }
+    }*/
 
     public Product(String name,boolean isImported,double price,Category category,int quantity) {
-        this(name,isImported,price,category,quantity,0,0);
+        this.name=name;
+        this.isImported=isImported;
+        this.price=price;
+        this.category=category;
+        this.quantity=quantity;
+        //this(name,isImported,price,category,quantity,0,0);
     }
 
     private void setName(String name) {
@@ -43,13 +50,13 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public void setTaxAmount(double taxAmount) {
+    /*public void setTaxAmount(double taxAmount) {
         this.taxAmount = taxAmount;
-    }
+    }*/
 
-    public void setTaxPercentage(int taxPercentage) {
+    /*public void setTaxPercentage(int taxPercentage) {
         this.taxPercentage = taxPercentage;
-    }
+    }*/
 
     public String getName() {
         return name;
@@ -71,15 +78,40 @@ public class Product {
         return quantity;
     }
 
-    public double getTaxAmount() {
+    /*public double getTaxAmount() {
+        return taxAmount;
+    }*/
+
+    /*public int getTaxPercentage() {
+        return taxPercentage;
+    }*/
+
+    public double singleProductTax()
+    {
+        int taxPercentage = 0;
+        double taxAmount = 0;
+        double price;
+        if(getCategory() == Category.GENERAL)
+        {
+            taxPercentage += 10;
+        }
+        if(isImported())
+        {
+            taxPercentage += 5;
+        }
+        if(taxPercentage != 0)
+        {
+            price=getPrice();
+            taxAmount = (taxPercentage * price) / 100;
+            taxAmount = roundingUpForExcess5Cents(taxAmount);
+            price=(price + taxAmount) * getQuantity();
+            taxAmount *= getQuantity();
+            setPrice(price);
+        }
         return taxAmount;
     }
 
-    public int getTaxPercentage() {
-        return taxPercentage;
-    }
-
-    @Override
+    /*@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -122,5 +154,37 @@ public class Product {
                 ", taxAmount=" + taxAmount +
                 ", taxPercentage=" + taxPercentage +
                 '}';
+    }*/
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Product product = (Product) o;
+
+        if (isImported != product.isImported) return false;
+        if (Double.compare(product.price, price) != 0) return false;
+        if (quantity != product.quantity) return false;
+        if (name != null ? !name.equals(product.name) : product.name != null) return false;
+        return category == product.category;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (isImported ? 1 : 0);
+        temp = Double.doubleToLongBits(price);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (category != null ? category.hashCode() : 0);
+        result = 31 * result + quantity;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return quantity + " " + name + " " + String.format( "%.2f", price ) +"€";
     }
 }
