@@ -1,5 +1,6 @@
 it\intre\ReceiptPrinter\Category.class
 it\intre\ReceiptPrinter\Receipt.class
+it\intre\ReceiptPrinter\FileReadWrite.class
 it\intre\ReceiptPrinter\Rounding.class
 it\intre\ReceiptPrinter\Product.class
 it\intre\ReceiptPrinter\App.class

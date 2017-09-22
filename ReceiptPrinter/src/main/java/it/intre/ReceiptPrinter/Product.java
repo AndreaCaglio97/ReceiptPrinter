@@ -8,18 +8,7 @@ public class Product {
     private double price;
     private Category category;
     private int quantity;
-    /*private double taxAmount;
-    private int taxPercentage;*/
 
-    /*public Product(String name,boolean isImported,double price,Category category,int quantity,double taxAmount,int taxPercentage){
-        this.name=name;
-        this.isImported=isImported;
-        this.price=price;
-        this.category=category;
-        this.quantity=quantity;
-        this.taxAmount=taxAmount;
-        this.taxPercentage=taxPercentage;
-    }*/
 
     public Product(String name,boolean isImported,double price,Category category,int quantity) {
         this.name=name;
@@ -27,7 +16,6 @@ public class Product {
         this.price=price;
         this.category=category;
         this.quantity=quantity;
-        //this(name,isImported,price,category,quantity,0,0);
     }
 
     private void setName(String name) {
@@ -50,14 +38,6 @@ public class Product {
         this.quantity = quantity;
     }
 
-    /*public void setTaxAmount(double taxAmount) {
-        this.taxAmount = taxAmount;
-    }*/
-
-    /*public void setTaxPercentage(int taxPercentage) {
-        this.taxPercentage = taxPercentage;
-    }*/
-
     public String getName() {
         return name;
     }
@@ -78,14 +58,6 @@ public class Product {
         return quantity;
     }
 
-    /*public double getTaxAmount() {
-        return taxAmount;
-    }*/
-
-    /*public int getTaxPercentage() {
-        return taxPercentage;
-    }*/
-
     public double singleProductTax()
     {
         int taxPercentage = 0;
@@ -104,59 +76,15 @@ public class Product {
             price=getPrice();
             taxAmount = (taxPercentage * price) / 100;
             taxAmount = roundingUpForExcess5Cents(taxAmount);
-            price=(price + taxAmount) * getQuantity();
+            price = (price + taxAmount) * getQuantity();
             taxAmount *= getQuantity();
             setPrice(price);
         }
         return taxAmount;
     }
 
-    /*@Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
 
-        Product product = (Product) o;
-
-        if (isImported != product.isImported) return false;
-        if (Double.compare(product.price, price) != 0) return false;
-        if (quantity != product.quantity) return false;
-        if (Double.compare(product.taxAmount, taxAmount) != 0) return false;
-        if (taxPercentage != product.taxPercentage) return false;
-        if (name != null ? !name.equals(product.name) : product.name != null) return false;
-        return category == product.category;
-    }
-
-    @Override
-    public int hashCode() {
-        int result;
-        long temp;
-        result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (isImported ? 1 : 0);
-        temp = Double.doubleToLongBits(price);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (category != null ? category.hashCode() : 0);
-        result = 31 * result + quantity;
-        temp = Double.doubleToLongBits(taxAmount);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + taxPercentage;
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", isImported=" + isImported +
-                ", price=" + price +
-                ", category=" + category +
-                ", quantity=" + quantity +
-                ", taxAmount=" + taxAmount +
-                ", taxPercentage=" + taxPercentage +
-                '}';
-    }*/
-
-    @Override
+   @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -182,6 +110,7 @@ public class Product {
         result = 31 * result + quantity;
         return result;
     }
+
 
     @Override
     public String toString() {

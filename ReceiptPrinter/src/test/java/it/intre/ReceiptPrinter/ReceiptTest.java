@@ -14,7 +14,9 @@ public class ReceiptTest {
         Product product = new Product("IPhone X",true, 1400, Category.GENERAL ,1);
         Receipt r = new Receipt();
         r.addNewProduct(product);
-        assertTrue(r.getReceipt().contains(product));
+        double total=r.calculationOfTotal();
+        assertEquals(1400,total,0.001);
+        //assertTrue(r.getReceipt().contains(product));
     }
 
     @Test
@@ -61,32 +63,4 @@ public class ReceiptTest {
         assertEquals(6.70,taxAmount,0.001);
         assertEquals(74.68,total,0.001);
     }
-
-    /*@Test
-    public void calculationOfTaxOfImportedGeneralProductTest()
-    {
-        Product productBeforeTax = new Product("IPhone X",true, 1400, Category.GENERAL ,1);
-        calculationOfTaxTest(productBeforeTax,1610,210,15);
-    }
-
-    @Test
-    public void calculationOfTaxOfNotImportedGeneralProductTest()
-    {
-        Product productBeforeTax = new Product("Orologio Armani",false, 250, Category.GENERAL ,1);
-        calculationOfTaxTest(productBeforeTax,275,25,10);
-    }
-
-    @Test
-    public void calculationOfTaxOfImportedNotGeneralProductTest()
-    {
-        Product productBeforeTax = new Product("Champagne",true, 500, Category.FOOD ,1);
-        calculationOfTaxTest(productBeforeTax,525,25,5);
-    }
-
-    @Test
-    public void calculationOfTaxOfNotImportedNotGeneralProductTest()
-    {
-        Product productBeforeTax = new Product("Barolo Riserva",false, 650, Category.FOOD ,1);
-        calculationOfTaxTest(productBeforeTax,650,0,0);
-    }*/
 }

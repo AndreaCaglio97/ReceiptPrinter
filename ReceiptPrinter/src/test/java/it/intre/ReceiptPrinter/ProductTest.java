@@ -17,8 +17,6 @@ public class ProductTest {
         assertEquals(1400,product.getPrice(),0.001);
         assertEquals(Category.GENERAL,product.getCategory());
         assertEquals(1,product.getQuantity());
-        /*assertEquals(0,product.getTaxAmount(),0.001);
-        assertEquals(0,product.getTaxPercentage());*/
     }
 
     private void calculationOfTaxTest(Product product,double expectedPrice,double expectedTaxAmount)
