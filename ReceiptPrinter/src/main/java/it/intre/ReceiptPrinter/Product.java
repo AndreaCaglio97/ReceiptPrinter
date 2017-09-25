@@ -62,7 +62,6 @@ public class Product {
     {
         int taxPercentage = 0;
         double taxAmount = 0;
-        double price;
         if(getCategory() == Category.GENERAL)
         {
             taxPercentage += 10;
@@ -73,18 +72,25 @@ public class Product {
         }
         if(taxPercentage != 0)
         {
-            price=getPrice();
-            taxAmount = (taxPercentage * price) / 100;
-            taxAmount = roundingUpForExcess5Cents(taxAmount);
-            price = (price + taxAmount) * getQuantity();
-            taxAmount *= getQuantity();
-            setPrice(price);
+            taxAmount = calculationOfPriceAndTaxAmount(taxPercentage);
         }
         return taxAmount;
     }
 
+    private double calculationOfPriceAndTaxAmount(int taxPercentage) {
+        double price;
+        double taxAmount;
+        price=getPrice();
+        taxAmount = (taxPercentage * price) / 100;
+        taxAmount = roundingUpForExcess5Cents(taxAmount);
+        price = (price + taxAmount) * getQuantity();
+        taxAmount *= getQuantity();
+        setPrice(price);
+        return taxAmount;
+    }
 
-   @Override
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

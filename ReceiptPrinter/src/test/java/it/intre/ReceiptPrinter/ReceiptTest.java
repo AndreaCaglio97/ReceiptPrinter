@@ -2,9 +2,6 @@ package it.intre.ReceiptPrinter;
 
 import org.junit.Test;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import static org.junit.Assert.*;
 
 public class ReceiptTest {
@@ -62,5 +59,14 @@ public class ReceiptTest {
         double total = r.calculationOfTotal();
         assertEquals(6.70,taxAmount,0.001);
         assertEquals(74.68,total,0.001);
+    }
+
+    @Test
+    public void readProductFromFileCSVTest()
+    {
+        Receipt receipt = new Receipt();
+        receipt.readProductFromFileCSV("productInputTest.csv");
+        double total = receipt.calculationOfTotal();
+        assertEquals(30.80,total,0.001);
     }
 }

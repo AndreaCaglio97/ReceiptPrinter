@@ -1,0 +1,10 @@
+RECEIPT
+
+1 Music CD 16.49€
+1 Chocolate bar 0.85€
+1 Book 12.49€
+
+Total taxes: 1.50€
+
+Total:29.83€
+
