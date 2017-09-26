@@ -17,6 +17,18 @@ public class ReceiptTest {
     }
 
     @Test
+    public void addProductContainedOnReceiptTest()
+    {
+        Product product1 = new Product("IPhone X",true, 1400, Category.GENERAL ,1);
+        Product product2 = new Product("IPhone X",true, 1400, Category.GENERAL ,1);
+        Receipt r = new Receipt();
+        r.addNewProduct(product1);
+        r.addNewProduct(product2);
+        double total=r.calculationOfTotal();
+        assertEquals(1400,total,0.001);
+    }
+
+    @Test
     public void calculationOfTaxTest()
     {
         Receipt r = new Receipt();

@@ -104,7 +104,7 @@ public class Product {
         return category == product.category;
     }
 
-    @Override
+    /*@Override
     public int hashCode() {
         int result;
         long temp;
@@ -115,7 +115,7 @@ public class Product {
         result = 31 * result + (category != null ? category.hashCode() : 0);
         result = 31 * result + quantity;
         return result;
-    }
+    }*/
 
 
     @Override

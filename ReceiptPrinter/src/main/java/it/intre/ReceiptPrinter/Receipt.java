@@ -1,25 +1,24 @@
 package it.intre.ReceiptPrinter;
 
 import java.io.*;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Receipt {
-    private Set<Product> receipt;
+    private List<Product> receipt;
 
     public Receipt()
     {
-        receipt = new HashSet<Product>();
+        receipt = new ArrayList<Product>();
     }
 
-    public Set<Product> getReceipt() {
+    public List<Product> getReceipt() {
         return receipt;
     }
 
     public void addNewProduct(Product product)
     {
-        receipt.add(product);
+        if(! receipt.contains(product))
+            receipt.add(product);
     }
 
     public double calculationOfTax()
