@@ -1,6 +1,8 @@
 package it.intre.ReceiptPrinter;
 
 
+import static it.intre.ReceiptPrinter.Jdbc.*;
+
 public class App {
     public static void inputProductsOutputTerminal()
     {
@@ -26,6 +28,7 @@ public class App {
     public static void main( String[] args )
     {
         //inputProductsOutputTerminal();
-        inputProductsFromCSVFileOutputTXTFile();
+        //inputProductsFromCSVFileOutputTXTFile();
+        connectionToDB();
     }
 }
