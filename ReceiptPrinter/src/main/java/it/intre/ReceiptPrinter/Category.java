@@ -4,5 +4,6 @@ public enum Category{
     FOOD,
     BOOK,
     MEDICINE,
-    GENERAL
+    GENERAL,
+    NOT_GENERAL
 };
