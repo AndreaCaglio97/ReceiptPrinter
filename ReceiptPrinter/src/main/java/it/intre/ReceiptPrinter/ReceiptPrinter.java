@@ -2,6 +2,7 @@ package it.intre.ReceiptPrinter;
 
 
 import it.intre.ReceiptPrinter.items.Category;
+import it.intre.ReceiptPrinter.items.ConnectionSingleton;
 import it.intre.ReceiptPrinter.items.Product;
 import it.intre.ReceiptPrinter.items.Receipt;
 
@@ -31,10 +32,8 @@ public class ReceiptPrinter {
         receipt.writeReceiptOnFileFormatted();
     }
 
-    public static void main( String[] args )
+    public static void inputProductsFromDBOutputTerminal()
     {
-        //inputProductsOutputTerminal();
-        //inputProductsFromCSVFileOutputTXTFile();
         Connection conn = connectionToDB();
         //viewTable(conn);
         Product p1 = productFromDB(1,conn);
@@ -46,5 +45,23 @@ public class ReceiptPrinter {
         receipt.addNewProduct(p3);
         receipt.printReceipt();
         CloseConnectionToDB(conn);
+    }
+
+    public static void main( String[] args )
+    {
+        //inputProductsOutputTerminal();
+        //inputProductsFromCSVFileOutputTXTFile();
+        //inputProductsFromDBOutputTerminal();
+
+        ConnectionSingleton connSingleton = ConnectionSingleton.getConnectionSingleton();
+        Product p1 = productFromDB(1,connSingleton.getConnection());
+        Product p2 = productFromDB(2,connSingleton.getConnection());
+        Product p3 = productFromDB(3,connSingleton.getConnection());
+        Receipt receipt = new Receipt();
+        receipt.addNewProduct(p1);
+        receipt.addNewProduct(p2);
+        receipt.addNewProduct(p3);
+        receipt.printReceipt();
+        connSingleton.CloseConnectionToDB();
     }
 }

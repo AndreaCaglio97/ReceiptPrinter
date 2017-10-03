@@ -1,6 +1,7 @@
-it\intre\ReceiptPrinter\ReceiptPrinter.class
 it\intre\ReceiptPrinter\database\DBManager.class
-it\intre\ReceiptPrinter\items\Receipt.class
+it\intre\ReceiptPrinter\items\ConnectionSingleton.class
 it\intre\ReceiptPrinter\utilities\Rounding.class
+it\intre\ReceiptPrinter\ReceiptPrinter.class
+it\intre\ReceiptPrinter\items\Receipt.class
 it\intre\ReceiptPrinter\items\Product.class
 it\intre\ReceiptPrinter\items\Category.class
