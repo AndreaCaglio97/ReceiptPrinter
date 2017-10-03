@@ -1,6 +1,6 @@
-it\intre\ReceiptPrinter\Category.class
-it\intre\ReceiptPrinter\Receipt.class
-it\intre\ReceiptPrinter\Rounding.class
-it\intre\ReceiptPrinter\Product.class
-it\intre\ReceiptPrinter\App.class
-it\intre\ReceiptPrinter\Jdbc.class
+it\intre\ReceiptPrinter\ReceiptPrinter.class
+it\intre\ReceiptPrinter\database\DBManager.class
+it\intre\ReceiptPrinter\items\Receipt.class
+it\intre\ReceiptPrinter\utilities\Rounding.class
+it\intre\ReceiptPrinter\items\Product.class
+it\intre\ReceiptPrinter\items\Category.class

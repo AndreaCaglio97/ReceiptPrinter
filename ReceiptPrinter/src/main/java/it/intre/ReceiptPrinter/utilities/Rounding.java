@@ -1,4 +1,4 @@
-package it.intre.ReceiptPrinter;
+package it.intre.ReceiptPrinter.utilities;
 
 public class Rounding {
     public static double roundingUpForExcess5Cents(double number)

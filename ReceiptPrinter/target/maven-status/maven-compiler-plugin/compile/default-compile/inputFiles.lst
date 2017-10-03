@@ -1,6 +1,6 @@
-C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\Rounding.java
-C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\Jdbc.java
-C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\Category.java
-C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\Receipt.java
-C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\Product.java
-C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\App.java
+C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\ReceiptPrinter.java
+C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\database\DBManager.java
+C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\items\Product.java
+C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\items\Receipt.java
+C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\utilities\Rounding.java
+C:\i3\Projects\ReceiptPrinter\ReceiptPrinter\src\main\java\it\intre\ReceiptPrinter\items\Category.java

@@ -1,4 +1,7 @@
-package it.intre.ReceiptPrinter;
+package it.intre.ReceiptPrinter.items;
+
+import it.intre.ReceiptPrinter.items.Category;
+import it.intre.ReceiptPrinter.items.Product;
 
 import java.io.*;
 import java.util.*;

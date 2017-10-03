@@ -1,11 +1,12 @@
-package it.intre.ReceiptPrinter;
+package it.intre.ReceiptPrinter.database;
 
-
+import it.intre.ReceiptPrinter.items.Category;
+import it.intre.ReceiptPrinter.items.Product;
 
 import java.sql.*;
 import java.util.Properties;
 
-public class Jdbc {
+public class DBManager {
 
     public static Connection connectionToDB() {
         Connection conn = null;
@@ -53,11 +54,11 @@ public class Jdbc {
         } catch (SQLException e ) {
             System.out.println("ERROR! query NOT successfully completed");
         } finally {
-            finallySQLExceptionHandling(stmt);
+            SQLExceptionHandling(stmt);
         }
     }
 
-    public static Product productFromDB(int id_product,Connection conn)  {
+    public static Product productFromDB(int id_product, Connection conn)  {
         Product product = null;
         Statement stmt = null;
         String query = "SELECT  *\n" +
@@ -73,21 +74,20 @@ public class Jdbc {
             Category category =  Category.valueOf(rs.getString("category"));
             product = new Product(name,isImported,price,category,1);
         } catch (SQLException e ) {
-            System.out.println("ERROR! query NOT successfully completed");
+            System.err.println("ERROR! query NOT successfully completed");
         } finally {
-            finallySQLExceptionHandling(stmt);
+            SQLExceptionHandling(stmt);
         }
         return product;
     }
 
-    public static void finallySQLExceptionHandling(Statement stmt) {
+    private static void SQLExceptionHandling(Statement stmt) {
         try {
             if (stmt != null) {
                 stmt.close();
             }
-        } catch (SQLException e)
-        {
-            System.out.println("ERROR! query NOT successfully completed");
+        } catch (SQLException e){
+            System.err.println("ERROR! query NOT successfully completed");
         }
     }
 

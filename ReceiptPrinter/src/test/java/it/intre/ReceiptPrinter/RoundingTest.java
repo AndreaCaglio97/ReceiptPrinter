@@ -1,6 +1,6 @@
 package it.intre.ReceiptPrinter;
 
-import static it.intre.ReceiptPrinter.Rounding.*;
+import static it.intre.ReceiptPrinter.utilities.Rounding.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;

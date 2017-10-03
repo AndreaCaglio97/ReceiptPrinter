@@ -1,4 +1,4 @@
-package it.intre.ReceiptPrinter;
+package it.intre.ReceiptPrinter.items;
 
 public enum Category{
     FOOD,

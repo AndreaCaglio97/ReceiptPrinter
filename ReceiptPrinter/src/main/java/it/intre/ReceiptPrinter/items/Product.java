@@ -1,6 +1,6 @@
-package it.intre.ReceiptPrinter;
+package it.intre.ReceiptPrinter.items;
 
-import static it.intre.ReceiptPrinter.Rounding.*;
+import static it.intre.ReceiptPrinter.utilities.Rounding.*;
 
 public class Product {
     private String name;
