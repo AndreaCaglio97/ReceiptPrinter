@@ -1,6 +1,8 @@
 package it.intre.ReceiptPrinter;
 
 
+import java.sql.Connection;
+
 import static it.intre.ReceiptPrinter.Jdbc.*;
 
 public class App {
@@ -29,6 +31,16 @@ public class App {
     {
         //inputProductsOutputTerminal();
         //inputProductsFromCSVFileOutputTXTFile();
-        connectionToDB();
+        Connection conn = connectionToDB();
+        viewTable(conn);
+        Product p1 = productFromDB(1,conn);
+        Product p2 = productFromDB(2,conn);
+        Product p3 = productFromDB(3,conn);
+        Receipt receipt = new Receipt();
+        receipt.addNewProduct(p1);
+        receipt.addNewProduct(p2);
+        receipt.addNewProduct(p3);
+        receipt.printReceipt();
+        CloseConnectionToDB(conn);
     }
 }
