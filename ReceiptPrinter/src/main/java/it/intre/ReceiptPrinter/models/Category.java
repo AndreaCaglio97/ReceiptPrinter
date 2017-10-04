@@ -1,4 +1,4 @@
-package it.intre.ReceiptPrinter.items;
+package it.intre.ReceiptPrinter.models;
 
 public enum Category{
     FOOD,

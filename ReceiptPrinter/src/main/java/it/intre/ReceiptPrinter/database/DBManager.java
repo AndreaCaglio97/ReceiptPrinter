@@ -1,38 +1,16 @@
 package it.intre.ReceiptPrinter.database;
 
-import it.intre.ReceiptPrinter.items.Category;
-import it.intre.ReceiptPrinter.items.Product;
+import it.intre.ReceiptPrinter.models.Category;
+import it.intre.ReceiptPrinter.models.Product;
 
 import java.sql.*;
 import java.util.Properties;
 
 public class DBManager {
 
-    public static Connection connectionToDB() {
-        Connection conn = null;
-        try {
-            String url = "jdbc:postgresql://localhost:5432/receiptdb";
-            Properties props = new Properties();
-            props.setProperty("user", "postgres");
-            props.setProperty("password", "intre$2017");
-
-            conn = DriverManager.getConnection(url, props);
-
-            System.out.println("Successful connection");
-
-        }catch (SQLException e) {
-            System.out.println("ERROR! Connection NOT successfully completed");
-        }
-        return conn;
-    }
-
-    public static void CloseConnectionToDB(Connection conn) {
-        try {
-            conn.close();
-            System.out.println("Successful close connection");
-        }catch (SQLException e) {
-            System.out.println("ERROR! Close connection NOT successfully completed");
-        }
+    public static void closeConnectionToDB() {
+        ConnectionManager connSingleton = ConnectionManager.getConnectionSingleton();
+        connSingleton.closeConnectionToDB();
     }
 
     public static void viewTable(Connection conn)  {
@@ -58,14 +36,14 @@ public class DBManager {
         }
     }
 
-    public static Product productFromDB(int id_product, Connection conn)  {
+    public static Product productFromDB(int id_product)  {
+        ConnectionManager connManager = ConnectionManager.getConnectionSingleton();
+        Statement stmt = connManager.createStatement();
         Product product = null;
-        Statement stmt = null;
         String query = "SELECT  *\n" +
                 "FROM product\n" +
                 "WHERE id_product = " + id_product;
         try {
-            stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
             rs.next();
             String name = rs.getString("name");

@@ -1,35 +1,43 @@
-package it.intre.ReceiptPrinter.items;
+package it.intre.ReceiptPrinter.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
-public class ConnectionSingleton {
-    private static ConnectionSingleton connSingleton;
+
+public class ConnectionManager {
+    private static ConnectionManager connManager;
     private Connection conn;
 
-    private ConnectionSingleton()
+    private ConnectionManager()
     {
     }
 
-    public Connection getConnection()
+    public Statement createStatement()
     {
-        return conn;
+        Statement stmt = null;
+        try {
+            stmt = conn.createStatement();
+        } catch (SQLException e) {
+            System.err.println("ERROR! query NOT successfully completed");
+        }
+        return stmt;
     }
 
-    public static ConnectionSingleton getConnectionSingleton()
+    public static ConnectionManager getConnectionSingleton()
     {
-        if (connSingleton == null)
+        if (connManager == null)
         {
-            connSingleton = new ConnectionSingleton();
+            connManager = new ConnectionManager();
             try {
                 String url = "jdbc:postgresql://localhost:5432/receiptdb";
                 Properties props = new Properties();
                 props.setProperty("user", "postgres");
                 props.setProperty("password", "intre$2017");
 
-                connSingleton.conn = DriverManager.getConnection(url, props);
+                connManager.conn = DriverManager.getConnection(url, props);
 
                 System.out.println("Successful connection");
 
@@ -38,10 +46,10 @@ public class ConnectionSingleton {
             }
         }
 
-        return connSingleton;
+        return connManager;
     }
 
-    public void CloseConnectionToDB() {
+    public void closeConnectionToDB() {
         try {
             conn.close();
             System.out.println("Successful close connection");

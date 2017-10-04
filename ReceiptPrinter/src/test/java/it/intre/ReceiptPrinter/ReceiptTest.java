@@ -1,8 +1,8 @@
 package it.intre.ReceiptPrinter;
 
-import it.intre.ReceiptPrinter.items.Category;
-import it.intre.ReceiptPrinter.items.Product;
-import it.intre.ReceiptPrinter.items.Receipt;
+import it.intre.ReceiptPrinter.models.Category;
+import it.intre.ReceiptPrinter.models.Product;
+import it.intre.ReceiptPrinter.models.Receipt;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
