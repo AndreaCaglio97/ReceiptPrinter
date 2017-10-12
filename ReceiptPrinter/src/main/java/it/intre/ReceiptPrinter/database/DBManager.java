@@ -94,7 +94,7 @@ public class DBManager {
         insertSingleProductToDB(productAttributes);
     }
 
-    private static void insertSingleProductToDB(String[] productAttributes)  {
+    public static void insertSingleProductToDB(String[] productAttributes)  {
         ConnectionManager connManager = ConnectionManager.getConnectionSingleton();
         Statement stmt = connManager.createStatement();
         String name = productAttributes[0];

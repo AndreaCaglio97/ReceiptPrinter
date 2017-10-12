@@ -4,4 +4,5 @@ it\intre\ReceiptPrinter\utilities\Rounding.class
 it\intre\ReceiptPrinter\database\ConnectionManager.class
 it\intre\ReceiptPrinter\ReceiptPrinter.class
 it\intre\ReceiptPrinter\models\Category.class
+it\intre\ReceiptPrinter\CommandLine\InputProductManager.class
 it\intre\ReceiptPrinter\models\Receipt.class
