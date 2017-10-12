@@ -56,15 +56,15 @@ public class Receipt {
     public void readProductFromFileCSV(String fileName)
     {
         try {
-            Scanner inputStream = new Scanner(new File(fileName));
-            inputStream.nextLine();
-            while (inputStream.hasNextLine()) {
-                addNewProductFromCSV(inputStream);
-            }
-            inputStream.close();
-        } catch(FileNotFoundException e) {
-            System.out.println("Cannot find file " + fileName);
+        Scanner inputStream = new Scanner(new File(fileName));
+        inputStream.nextLine();
+        while (inputStream.hasNextLine()) {
+            addNewProductFromCSV(inputStream);
         }
+        inputStream.close();
+    } catch(FileNotFoundException e) {
+        System.out.println("Cannot find file " + fileName);
+    }
     }
 
     private void addNewProductFromCSV(Scanner inputStream)

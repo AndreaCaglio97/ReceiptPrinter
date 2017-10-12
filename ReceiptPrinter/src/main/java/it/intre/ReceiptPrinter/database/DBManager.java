@@ -3,8 +3,11 @@ package it.intre.ReceiptPrinter.database;
 import it.intre.ReceiptPrinter.models.Category;
 import it.intre.ReceiptPrinter.models.Product;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.*;
 import java.util.Properties;
+import java.util.Scanner;
 
 public class DBManager {
 
@@ -66,6 +69,50 @@ public class DBManager {
             }
         } catch (SQLException e){
             System.err.println("ERROR! query NOT successfully completed");
+        }
+    }
+
+    public static void inputDBProductFromFileCSV(String fileName)
+    {
+        try {
+            Scanner inputStream = new Scanner(new File(fileName));
+            inputStream.nextLine();
+            while (inputStream.hasNextLine()) {
+                readSingleProductFromFileCSV(inputStream);
+            }
+            inputStream.close();
+        } catch(FileNotFoundException e) {
+            System.out.println("Cannot find file " + fileName);
+        }
+    }
+
+    private static void readSingleProductFromFileCSV(Scanner inputStream)
+    {
+        String line;
+        line = inputStream.nextLine();
+        String[] productAttributes = line.split(",");
+        insertSingleProductToDB(productAttributes);
+    }
+
+    private static void insertSingleProductToDB(String[] productAttributes)  {
+        ConnectionManager connManager = ConnectionManager.getConnectionSingleton();
+        Statement stmt = connManager.createStatement();
+        String name = productAttributes[0];
+        boolean isImported = Boolean.parseBoolean(productAttributes[1]);
+        double price = Double.parseDouble(productAttributes[2]);
+        Category category = Category.valueOf(productAttributes[3]);
+
+        String query = "INSERT INTO product(\n" +
+                "\tname, is_imported, price, category)\n" +
+                "\tVALUES ('" + name + "', " + isImported + ", " + price + ", '" + category + "');";
+        try {
+            stmt.executeUpdate(query);
+            System.out.println("Record is inserted into product table!");
+        } catch (SQLException e ) {
+            System.err.println("ERROR! query NOT successfully completed");
+            System.out.println(e.getMessage());
+        } finally {
+            SQLExceptionHandling(stmt);
         }
     }
 

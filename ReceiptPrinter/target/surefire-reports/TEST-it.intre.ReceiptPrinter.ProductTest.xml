@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="it.intre.ReceiptPrinter.ProductTest" time="0.012" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="it.intre.ReceiptPrinter.ProductTest" time="0.008" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2017.2.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -62,8 +62,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="it.intre.ReceiptPrinter.ProductTest" name="calculationOfTaxOfImportedNotGeneralProductTest" time="0.012"/>
-  <testcase classname="it.intre.ReceiptPrinter.ProductTest" name="calculationOfTaxOfNotImportedGeneralProductTest" time="0"/>
+  <testcase classname="it.intre.ReceiptPrinter.ProductTest" name="calculationOfTaxOfImportedNotGeneralProductTest" time="0.007"/>
+  <testcase classname="it.intre.ReceiptPrinter.ProductTest" name="calculationOfTaxOfNotImportedGeneralProductTest" time="0.001"/>
   <testcase classname="it.intre.ReceiptPrinter.ProductTest" name="calculationOfTaxOfImportedGeneralProductTest" time="0"/>
   <testcase classname="it.intre.ReceiptPrinter.ProductTest" name="calculationOfTaxOfNotImportedNotGeneralProductTest" time="0"/>
   <testcase classname="it.intre.ReceiptPrinter.ProductTest" name="createNewProductTest" time="0"/>

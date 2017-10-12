@@ -45,10 +45,17 @@ public class ReceiptPrinter {
         closeConnectionToDB();
     }
 
+    public static void inputProductToDBFromCSVFile()
+    {
+        inputDBProductFromFileCSV("insertQueryProductList.csv");
+        closeConnectionToDB();
+    }
+
     public static void main( String[] args )
     {
         //inputProductsOutputTerminal();
         //inputProductsFromCSVFileOutputTXTFile();
-        inputProductsFromDBOutputTerminal();
+        //inputProductsFromDBOutputTerminal();
+        inputProductToDBFromCSVFile();
     }
 }
