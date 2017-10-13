@@ -16,13 +16,13 @@ public class InputProductManager {
         String other;
         Product product;
         do {
-            product = inputProductAttributes();
+            product = createProduct();
             insertSingleProductToDB(product);
             other = answerYesNo("Do you want to insert another product?");
         }while(other.equalsIgnoreCase("yes"));
     }
 
-    private static Product inputProductAttributes() {
+    private static Product createProduct() {
         Product product = new Product();
         product.setName(insertProductName());
         product.setImported(isProductImported());
