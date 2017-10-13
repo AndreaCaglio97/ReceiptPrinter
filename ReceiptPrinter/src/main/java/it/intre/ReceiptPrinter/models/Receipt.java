@@ -15,14 +15,12 @@ public class Receipt {
         return receipt;
     }
 
-    public void addNewProduct(Product product)
-    {
+    public void addNewProduct(Product product) {
         if(! receipt.contains(product))
             receipt.add(product);
     }
 
-    public double calculationOfTax()
-    {
+    public double calculationOfTax() {
         double taxAmount=0;
         for(Product product : receipt) {
             taxAmount += product.singleProductTax();
@@ -30,8 +28,7 @@ public class Receipt {
         return taxAmount;
     }
 
-    public double calculationOfTotal()
-    {
+    public double calculationOfTotal() {
         double total=0;
         for(Product product : receipt) {
             total += product.getPrice();
@@ -39,8 +36,7 @@ public class Receipt {
         return total;
     }
 
-    public void printReceipt()
-    {
+    public void printReceipt() {
         double taxAmount = calculationOfTax();
         double total = calculationOfTotal();
         System.out.println("RECEIPT");
@@ -53,8 +49,7 @@ public class Receipt {
         System.out.println("Total:" + String.format( "%.2f", total ) + "€");
     }
 
-    public void readProductFromFileCSV(String fileName)
-    {
+    public void readProductFromFileCSV(String fileName) {
         try {
         Scanner inputStream = new Scanner(new File(fileName));
         inputStream.nextLine();
@@ -67,8 +62,7 @@ public class Receipt {
     }
     }
 
-    private void addNewProductFromCSV(Scanner inputStream)
-    {
+    private void addNewProductFromCSV(Scanner inputStream) {
         String line;
         line = inputStream.nextLine();
         String[] productAttributes = line.split(",");
@@ -81,8 +75,7 @@ public class Receipt {
         addNewProduct(product);
     }
 
-    public void writeReceiptOnFile()
-    {
+    public void writeReceiptOnFile() {
         String fileName = "receipt.txt";
         FileWriter outputStream = null;
         double taxAmount = calculationOfTax();
@@ -102,8 +95,7 @@ public class Receipt {
         }
     }
 
-    private void receiptOnFile(FileWriter outputStream, double taxAmount, double total) throws IOException
-    {
+    private void receiptOnFile(FileWriter outputStream, double taxAmount, double total) throws IOException {
         outputStream.write("RECEIPT" + "\n\n");
         for(Product product : receipt) {
             outputStream.write(product.toString() + "\n");
@@ -113,8 +105,7 @@ public class Receipt {
         outputStream.write("Total:" + String.format( "%.2f", total ) + "€" + "\n");
     }
 
-    public void writeReceiptOnFileFormatted()
-    {
+    public void writeReceiptOnFileFormatted() {
         String fileName = "receipt.txt";
         PrintWriter outputStream = null;
         double taxAmount = calculationOfTax();
@@ -129,8 +120,7 @@ public class Receipt {
         outputStream.close( );
     }
 
-    private void receiptOnFileFormatted(PrintWriter outputStream, double taxAmount, double total)
-    {
+    private void receiptOnFileFormatted(PrintWriter outputStream, double taxAmount, double total) {
         outputStream.println("RECEIPT");
         outputStream.println();
         for(Product product : receipt) {

@@ -18,11 +18,15 @@ public class Product {
         this.quantity=quantity;
     }
 
-    private void setName(String name) {
+    public Product() {
+        this(null,false,0,Category.GENERAL,0);
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    private void setImported(boolean imported) {
+    public void setImported(boolean imported) {
         isImported = imported;
     }
 
@@ -30,11 +34,11 @@ public class Product {
         this.price = price;
     }
 
-    private void setCategory(Category category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 
-    private void setQuantity(int quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
@@ -58,8 +62,7 @@ public class Product {
         return quantity;
     }
 
-    public double singleProductTax()
-    {
+    public double singleProductTax() {
         int taxPercentage = 0;
         double taxAmount = 0;
         if(getCategory() == Category.GENERAL)

@@ -11,12 +11,10 @@ public class ConnectionManager {
     private static ConnectionManager connManager;
     private Connection conn;
 
-    private ConnectionManager()
-    {
+    private ConnectionManager() {
     }
 
-    public Statement createStatement()
-    {
+    public Statement createStatement() {
         Statement stmt = null;
         try {
             stmt = conn.createStatement();
@@ -26,10 +24,8 @@ public class ConnectionManager {
         return stmt;
     }
 
-    public static ConnectionManager getConnectionSingleton()
-    {
-        if (connManager == null)
-        {
+    public static ConnectionManager getConnectionSingleton() {
+        if (connManager == null) {
             connManager = new ConnectionManager();
             try {
                 String url = "jdbc:postgresql://localhost:5432/receiptdb";

@@ -72,8 +72,7 @@ public class DBManager {
         }
     }
 
-    public static void inputDBProductFromFileCSV(String fileName)
-    {
+    public static void inputDBProductFromFileCSV(String fileName) {
         try {
             Scanner inputStream = new Scanner(new File(fileName));
             inputStream.nextLine();
@@ -86,28 +85,34 @@ public class DBManager {
         }
     }
 
-    private static void readSingleProductFromFileCSV(Scanner inputStream)
-    {
+    private static void readSingleProductFromFileCSV(Scanner inputStream) {
         String line;
         line = inputStream.nextLine();
         String[] productAttributes = line.split(",");
-        insertSingleProductToDB(productAttributes);
+        Product product = parseStringLineToProduct(productAttributes);
+        insertSingleProductToDB(product);
     }
 
-    public static void insertSingleProductToDB(String[] productAttributes)  {
+    private static Product parseStringLineToProduct(String[] productAttributes) {
+        Product product = new Product();
+        product.setName(productAttributes[0]);
+        product.setImported(Boolean.parseBoolean(productAttributes[1]));
+        product.setPrice(Double.parseDouble(productAttributes[2]));
+        product.setCategory(Category.valueOf(productAttributes[3]));
+        return product;
+    }
+
+
+    public static void insertSingleProductToDB(Product product)  {
         ConnectionManager connManager = ConnectionManager.getConnectionSingleton();
         Statement stmt = connManager.createStatement();
-        String name = productAttributes[0];
-        boolean isImported = Boolean.parseBoolean(productAttributes[1]);
-        double price = Double.parseDouble(productAttributes[2]);
-        Category category = Category.valueOf(productAttributes[3]);
 
         String query = "INSERT INTO product(\n" +
                 "\tname, is_imported, price, category)\n" +
-                "\tVALUES ('" + name + "', " + isImported + ", " + price + ", '" + category + "');";
+                "\tVALUES ('" + product.getName() + "', " + product.isImported() + ", " + product.getPrice() + ", '" + product.getCategory() + "');";
         try {
             stmt.executeUpdate(query);
-            System.out.println("Record is inserted into product table!");
+            System.out.println("Record has been inserted into product table!");
         } catch (SQLException e ) {
             System.err.println("ERROR! query NOT successfully completed");
             System.out.println(e.getMessage());

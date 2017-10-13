@@ -1,3 +1,4 @@
 it\intre\ReceiptPrinter\ProductTest.class
 it\intre\ReceiptPrinter\ReceiptTest.class
+it\intre\ReceiptPrinter\CommandLine\InputProductManagerTest.class
 it\intre\ReceiptPrinter\RoundingTest.class
