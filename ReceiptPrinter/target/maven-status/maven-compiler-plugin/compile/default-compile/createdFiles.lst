@@ -6,3 +6,4 @@ it\intre\ReceiptPrinter\ReceiptPrinter.class
 it\intre\ReceiptPrinter\models\Category.class
 it\intre\ReceiptPrinter\CommandLine\InputProductManager.class
 it\intre\ReceiptPrinter\models\Receipt.class
+it\intre\ReceiptPrinter\CommandLine\MenuManager.class

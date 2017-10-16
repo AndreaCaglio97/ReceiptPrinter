@@ -38,7 +38,7 @@ public class InputProductManager {
 
     private static boolean isProductImported() {
         boolean isImported = false;
-        String answer = answerYesNo("Is the product imported? ");
+        String answer = answerYesNo("Is the product imported? (yes/no) ");
         if(answer.equalsIgnoreCase("yes"))
             isImported = true;
         return isImported;
@@ -62,10 +62,10 @@ public class InputProductManager {
         return price;
     }
 
-    private static boolean checkValidInputPrice(double number) {
+    public static boolean checkValidInputPrice(double number) {
         boolean check;
         if(number < 0.01) {
-            System.err.println("ERROR! Invalid input! ");
+            System.out.println("ERROR! Invalid input! The price must be positive");
             check = false;
         }
         else {
@@ -75,7 +75,7 @@ public class InputProductManager {
     }
 
 
-    public static Category insertProductCategory() {
+    private static Category insertProductCategory() {
         int answer = 0;
         boolean isInputValid;
         do {
@@ -95,7 +95,7 @@ public class InputProductManager {
     public static boolean checkValidInputCategory(int number) {
         boolean check;
         if((number < 1)||(number > 5)) {
-            System.err.println("ERROR! Invalid input! ");
+            System.out.println("ERROR! Invalid input! You must insert a number between 1 and 5");
             check = false;
         }
         else {
@@ -106,11 +106,13 @@ public class InputProductManager {
 
     private static String answerYesNo(String message) {
         String answer;
+        if(message.equals("Do you want to insert another product?"))
+            keyboard.nextLine();
         do {
             System.out.println(message);
             answer = keyboard.nextLine();
             if((!answer.equalsIgnoreCase("yes")) && (!answer.equalsIgnoreCase("no")))
-                System.err.println("ERROR! Invalid answer!");
+                System.out.println("ERROR! Invalid answer! You must answer 'yes' or 'no' ");
         }while((!answer.equalsIgnoreCase("yes")) && (!answer.equalsIgnoreCase("no")));
         return answer;
     }

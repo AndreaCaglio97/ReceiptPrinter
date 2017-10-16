@@ -1,12 +1,11 @@
 package it.intre.ReceiptPrinter;
 
 
+import it.intre.ReceiptPrinter.CommandLine.MenuManager;
 import it.intre.ReceiptPrinter.models.Category;
 import it.intre.ReceiptPrinter.models.Product;
 import it.intre.ReceiptPrinter.models.Receipt;
 
-
-import static it.intre.ReceiptPrinter.CommandLine.InputProductManager.*;
 import static it.intre.ReceiptPrinter.database.DBManager.*;
 
 public class ReceiptPrinter {
@@ -27,6 +26,7 @@ public class ReceiptPrinter {
         Receipt receipt = new Receipt();
         receipt.readProductFromFileCSV("ProductList.csv");
         receipt.writeReceiptOnFileFormatted();
+        System.out.println("The location of receipt.text is C:\\i3\\Projects\\ReceiptPrinter\\ReceiptPrinter");
     }
 
     public static void inputProductsFromDBOutputTerminal() {
@@ -47,10 +47,13 @@ public class ReceiptPrinter {
     }
 
     public static void main( String[] args ) {
+        //inputProductToDBFromCommandLine();
         //inputProductsOutputTerminal();
         //inputProductsFromCSVFileOutputTXTFile();
         //inputProductsFromDBOutputTerminal();
         //inputProductToDBFromCSVFile();
-        inputProductToDBFromCommandLine();
+
+        MenuManager menuManager = new MenuManager();
+        menuManager.printMenu();
     }
 }

@@ -19,7 +19,7 @@ public class ConnectionManager {
         try {
             stmt = conn.createStatement();
         } catch (SQLException e) {
-            System.err.println("ERROR! query NOT successfully completed");
+            System.err.println("ERROR! statement NOT successfully created");
         }
         return stmt;
     }
