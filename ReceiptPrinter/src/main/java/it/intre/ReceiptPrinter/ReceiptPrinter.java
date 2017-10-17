@@ -1,7 +1,7 @@
 package it.intre.ReceiptPrinter;
 
 
-import it.intre.ReceiptPrinter.CommandLine.MenuManager;
+import it.intre.ReceiptPrinter.Menu.MenuManager;
 import it.intre.ReceiptPrinter.models.Category;
 import it.intre.ReceiptPrinter.models.Product;
 import it.intre.ReceiptPrinter.models.Receipt;
@@ -38,12 +38,10 @@ public class ReceiptPrinter {
         receipt.addNewProduct(p2);
         receipt.addNewProduct(p3);
         receipt.printReceipt();
-        closeConnectionToDB();
     }
 
     public static void inputProductToDBFromCSVFile() {
         inputDBProductFromFileCSV("insertQueryProductList.csv");
-        closeConnectionToDB();
     }
 
     public static void main( String[] args ) {

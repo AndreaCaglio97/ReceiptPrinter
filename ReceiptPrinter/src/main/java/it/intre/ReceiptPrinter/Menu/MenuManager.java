@@ -1,9 +1,11 @@
-package it.intre.ReceiptPrinter.CommandLine;
+package it.intre.ReceiptPrinter.Menu;
+
+import it.intre.ReceiptPrinter.database.ConnectionManager;
+import it.intre.ReceiptPrinter.models.Menu;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import static it.intre.ReceiptPrinter.CommandLine.InputProductManager.inputProductToDBFromCommandLine;
-import static it.intre.ReceiptPrinter.ReceiptPrinter.*;
+import static it.intre.ReceiptPrinter.database.DBManager.closeConnectionToDB;
 
 public class MenuManager {
 
@@ -50,7 +52,7 @@ public class MenuManager {
         return check;
     }
 
-    private void selectFunctionAccordingToChoice() {
+    /*private void selectFunctionAccordingToChoice() {
         if(choice == 1) {
             inputProductToDBFromCommandLine();
         } else if(choice == 2) {
@@ -62,12 +64,30 @@ public class MenuManager {
         } else if(choice == 5){
             inputProductToDBFromCSVFile();
         }
+    }*/
+
+    private void selectFunctionAccordingToChoice(Menu menu) {
+        menu.getOption(choice).menuOptionFunction();
+    }
+
+    private Menu createMenuOptions() {
+        Menu menu = new Menu();
+        menu.addOption(1,new ProductFromCommandLine());
+        menu.addOption(2,new ProductsOutputTerminal());
+        menu.addOption(3,new CSVFileOutputTXTFile());
+        menu.addOption(4,new ProductsFromDBOutputTerminal());
+        menu.addOption(5,new ProductToDBFromCSVFile());
+        return menu;
     }
 
     public void printMenu() {
+        ConnectionManager.getConnectionSingleton();
+        Menu menu = createMenuOptions();
         do {
             insertChoice();
-            selectFunctionAccordingToChoice();
+            if(choice != 6)
+                selectFunctionAccordingToChoice(menu);
         }while(choice != 6);
+        closeConnectionToDB();
     }
 }
