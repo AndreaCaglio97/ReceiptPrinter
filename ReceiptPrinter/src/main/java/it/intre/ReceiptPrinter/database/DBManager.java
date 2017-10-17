@@ -11,10 +11,10 @@ import java.util.Scanner;
 
 public class DBManager {
 
-    public static void closeConnectionToDB() {
+    /*public static void CloseConnectionToDB() {
         ConnectionManager connSingleton = ConnectionManager.getConnectionSingleton();
-        connSingleton.closeConnectionToDB();
-    }
+        connSingleton.CloseConnectionToDB();
+    }*/
 
     public static void viewTable(Connection conn)  {
 

@@ -5,7 +5,6 @@ import it.intre.ReceiptPrinter.models.Menu;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import static it.intre.ReceiptPrinter.database.DBManager.closeConnectionToDB;
 
 public class MenuManager {
 
@@ -77,6 +76,7 @@ public class MenuManager {
         menu.addOption(3,new CSVFileOutputTXTFile());
         menu.addOption(4,new ProductsFromDBOutputTerminal());
         menu.addOption(5,new ProductToDBFromCSVFile());
+        menu.addOption(6,new CloseConnectionToDB());
         return menu;
     }
 
@@ -85,9 +85,7 @@ public class MenuManager {
         Menu menu = createMenuOptions();
         do {
             insertChoice();
-            if(choice != 6)
-                selectFunctionAccordingToChoice(menu);
+            selectFunctionAccordingToChoice(menu);
         }while(choice != 6);
-        closeConnectionToDB();
     }
 }
