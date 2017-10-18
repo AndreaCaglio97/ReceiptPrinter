@@ -12,7 +12,7 @@ public class InputProductManager {
 
     static Scanner keyboard = new Scanner(System.in);
 
-    public static void inputProductToDBFromCommandLine() {
+    public void inputProductToDBFromCommandLine() {
         String other;
         Product product;
         do {

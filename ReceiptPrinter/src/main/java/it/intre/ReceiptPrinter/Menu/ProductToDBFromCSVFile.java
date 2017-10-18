@@ -1,9 +1,11 @@
 package it.intre.ReceiptPrinter.Menu;
 
-import static it.intre.ReceiptPrinter.ReceiptPrinter.inputProductToDBFromCSVFile;
+import it.intre.ReceiptPrinter.ReceiptPrinter;
+
 
 public class ProductToDBFromCSVFile implements IMenuOption {
     public void menuOptionFunction() {
-        inputProductToDBFromCSVFile();
+        ReceiptPrinter receiptPrinter = new ReceiptPrinter();
+        receiptPrinter.inputProductToDBFromCSVFile();
     }
 }

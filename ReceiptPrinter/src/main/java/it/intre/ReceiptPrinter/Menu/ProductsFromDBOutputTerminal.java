@@ -1,9 +1,11 @@
 package it.intre.ReceiptPrinter.Menu;
 
-import static it.intre.ReceiptPrinter.ReceiptPrinter.*;
+import it.intre.ReceiptPrinter.ReceiptPrinter;
+
 
 public class ProductsFromDBOutputTerminal implements IMenuOption {
     public void menuOptionFunction() {
-        inputProductsFromDBOutputTerminal();
+        ReceiptPrinter receiptPrinter = new ReceiptPrinter();
+        receiptPrinter.inputProductsFromDBOutputTerminal();
     }
 }

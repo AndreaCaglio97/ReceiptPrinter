@@ -9,7 +9,7 @@ import it.intre.ReceiptPrinter.models.Receipt;
 import static it.intre.ReceiptPrinter.database.DBManager.*;
 
 public class ReceiptPrinter {
-    public static void inputProductsOutputTerminal() {
+    public void inputProductsOutputTerminal() {
         Receipt r = new Receipt();
         Product iBottleOfPerfume = new Product("Imported bottle of perfume",true,27.99, Category.GENERAL,1);
         Product bottleOfPerfume = new Product("Bottle of perfume",false,18.99,Category.GENERAL,1);
@@ -22,14 +22,14 @@ public class ReceiptPrinter {
         r.printReceipt();
     }
 
-    public static void inputProductsFromCSVFileOutputTXTFile() {
+    public void inputProductsFromCSVFileOutputTXTFile() {
         Receipt receipt = new Receipt();
         receipt.readProductFromFileCSV("ProductList.csv");
         receipt.writeReceiptOnFileFormatted();
         System.out.println("The location of receipt.text is C:\\i3\\Projects\\ReceiptPrinter\\ReceiptPrinter");
     }
 
-    public static void inputProductsFromDBOutputTerminal() {
+    public void inputProductsFromDBOutputTerminal() {
         Product p1 = productFromDB(1);
         Product p2 = productFromDB(2);
         Product p3 = productFromDB(3);
@@ -40,7 +40,7 @@ public class ReceiptPrinter {
         receipt.printReceipt();
     }
 
-    public static void inputProductToDBFromCSVFile() {
+    public void inputProductToDBFromCSVFile() {
         inputDBProductFromFileCSV("insertQueryProductList.csv");
     }
 
