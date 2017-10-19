@@ -14,4 +14,5 @@ it\intre\ReceiptPrinter\Menu\ProductToDBFromCSVFile.class
 it\intre\ReceiptPrinter\Menu\CloseConnectionToDB.class
 it\intre\ReceiptPrinter\models\Product.class
 it\intre\ReceiptPrinter\Menu\MenuManager.class
+it\intre\ReceiptPrinter\CommandLine\FetchProductManager.class
 it\intre\ReceiptPrinter\CommandLine\InputProductManager.class

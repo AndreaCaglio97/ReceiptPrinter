@@ -62,8 +62,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="it.intre.ReceiptPrinter.InputProductManagerTest" name="inputCategoryNumberBetween1And5ReturnTrueTest" time="0.016"/>
-  <testcase classname="it.intre.ReceiptPrinter.InputProductManagerTest" name="inputTooSmallPriceReturnFalseTest" time="0"/>
+  <testcase classname="it.intre.ReceiptPrinter.InputProductManagerTest" name="inputCategoryNumberBetween1And5ReturnTrueTest" time="0"/>
+  <testcase classname="it.intre.ReceiptPrinter.InputProductManagerTest" name="inputTooSmallPriceReturnFalseTest" time="0.016"/>
   <testcase classname="it.intre.ReceiptPrinter.InputProductManagerTest" name="inputPositivePriceReturnTrueTest" time="0"/>
   <testcase classname="it.intre.ReceiptPrinter.InputProductManagerTest" name="inputNegativePriceReturnFalseTest" time="0"/>
   <testcase classname="it.intre.ReceiptPrinter.InputProductManagerTest" name="inputCategoryNumberGreaterThan5ReturnFalseTest" time="0"/>

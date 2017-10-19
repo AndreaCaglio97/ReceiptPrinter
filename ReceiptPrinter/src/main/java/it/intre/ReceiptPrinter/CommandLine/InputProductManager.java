@@ -104,7 +104,7 @@ public class InputProductManager {
         return check;
     }
 
-    private static String answerYesNo(String message) {
+    public static String answerYesNo(String message) {
         String answer;
         if(message.equals("Do you want to insert another product?"))
             keyboard.nextLine();
