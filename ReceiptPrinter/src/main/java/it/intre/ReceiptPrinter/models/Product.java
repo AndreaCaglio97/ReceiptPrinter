@@ -107,18 +107,6 @@ public class Product {
         return category == product.category;
     }
 
-    /*@Override
-    public int hashCode() {
-        int result;
-        long temp;
-        result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (isImported ? 1 : 0);
-        temp = Double.doubleToLongBits(price);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (category != null ? category.hashCode() : 0);
-        result = 31 * result + quantity;
-        return result;
-    }*/
 
 
     @Override

@@ -10,15 +10,13 @@ import static it.intre.ReceiptPrinter.models.Category.*;
 
 public class InputProductManager {
 
-    static Scanner keyboard = new Scanner(System.in);
-
     public void inputProductToDBFromCommandLine() {
         String other;
         Product product;
         do {
             product = createProduct();
             insertSingleProductToDB(product);
-            other = answerYesNo("Do you want to insert another product?");
+            other = answerYesNo("Do you want to insert another product? (yes/no)");
         }while(other.equalsIgnoreCase("yes"));
     }
 
@@ -32,6 +30,7 @@ public class InputProductManager {
     }
 
     private static String insertProductName() {
+        Scanner keyboard = new Scanner(System.in);
         System.out.println("Insert the product name: ");
         return keyboard.nextLine();
     }
@@ -45,6 +44,7 @@ public class InputProductManager {
     }
 
     private static double insertProductPrice() {
+        Scanner keyboard = new Scanner(System.in);
         double price = 0;
         boolean isInputValid;
         do {
@@ -76,6 +76,7 @@ public class InputProductManager {
 
 
     private static Category insertProductCategory() {
+        Scanner keyboard = new Scanner(System.in);
         int answer = 0;
         boolean isInputValid;
         do {
@@ -105,9 +106,8 @@ public class InputProductManager {
     }
 
     public static String answerYesNo(String message) {
+        Scanner keyboard = new Scanner(System.in);
         String answer;
-        if(message.equals("Do you want to insert another product?"))
-            keyboard.nextLine();
         do {
             System.out.println(message);
             answer = keyboard.nextLine();

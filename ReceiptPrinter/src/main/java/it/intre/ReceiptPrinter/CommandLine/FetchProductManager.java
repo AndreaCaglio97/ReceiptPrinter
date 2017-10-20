@@ -10,7 +10,6 @@ import static it.intre.ReceiptPrinter.CommandLine.InputProductManager.*;
 import static it.intre.ReceiptPrinter.database.DBManager.*;
 
 public class FetchProductManager {
-    static Scanner keyboard = new Scanner(System.in);
 
     public void fetchProductFromDB() {
         int idProduct;
@@ -18,16 +17,16 @@ public class FetchProductManager {
         Receipt receipt = new Receipt();
         String other;
         do {
-            idProduct=insertProductId();//farà anche il check per controllare se esite l'id
-                                         //del prodotto tramite una select che conta il numero dei prodotti
-                                         //con quell'id (deve essercene 1)
+            idProduct=insertProductId();
             product = productFromDB(idProduct);
             receipt.addNewProduct(product);
-            other = answerYesNo("Do you want to insert another product?");
+            other = answerYesNo("Do you want to insert another product in the receipt? (yes/no)");
         }while(other.equalsIgnoreCase("yes"));
+        receipt.printReceipt();
     }
 
     private static int insertProductId() {
+        Scanner keyboard = new Scanner(System.in);
         int answer = 0;
         boolean isInputValid;
         do {
@@ -46,7 +45,7 @@ public class FetchProductManager {
 
     public static boolean checkValidInputProductId(int idProduct) {
         boolean check;
-        if((idProduct < 1)||(!checkIdProductExist(idProduct))) {
+        if((idProduct < 1)||(productFromDB(idProduct) == null)) {
             System.out.println("ERROR! Invalid input! You must insert an existing product Id");
             check = false;
         }
@@ -54,11 +53,6 @@ public class FetchProductManager {
             check = true;
         }
         return check;
-    }
-
-    private static boolean checkIdProductExist(int idProduct) {
-        //chiama un metodo che usa una select per vedere se esite il prodotto nel db
-        return false;
     }
 
 }

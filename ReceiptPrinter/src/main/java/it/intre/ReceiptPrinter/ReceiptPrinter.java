@@ -29,28 +29,12 @@ public class ReceiptPrinter {
         System.out.println("The location of receipt.text is C:\\i3\\Projects\\ReceiptPrinter\\ReceiptPrinter");
     }
 
-    public void inputProductsFromDBOutputTerminal() {
-        Product p1 = productFromDB(1);
-        Product p2 = productFromDB(2);
-        Product p3 = productFromDB(3);
-        Receipt receipt = new Receipt();
-        receipt.addNewProduct(p1);
-        receipt.addNewProduct(p2);
-        receipt.addNewProduct(p3);
-        receipt.printReceipt();
-    }
 
     public void inputProductToDBFromCSVFile() {
         inputDBProductFromFileCSV("insertQueryProductList.csv");
     }
 
     public static void main( String[] args ) {
-        //inputProductToDBFromCommandLine();
-        //inputProductsOutputTerminal();
-        //inputProductsFromCSVFileOutputTXTFile();
-        //inputProductsFromDBOutputTerminal();
-        //inputProductToDBFromCSVFile();
-
         MenuManager menuManager = new MenuManager();
         menuManager.printMenu();
     }

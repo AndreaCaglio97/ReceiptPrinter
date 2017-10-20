@@ -51,19 +51,6 @@ public class MenuManager {
         return check;
     }
 
-    /*private void selectFunctionAccordingToChoice() {
-        if(choice == 1) {
-            inputProductToDBFromCommandLine();
-        } else if(choice == 2) {
-            inputProductsOutputTerminal();
-        } else if(choice == 3) {
-            inputProductsFromCSVFileOutputTXTFile();
-        } else if(choice == 4) {
-            inputProductsFromDBOutputTerminal();
-        } else if(choice == 5){
-            inputProductToDBFromCSVFile();
-        }
-    }*/
 
     private void selectFunctionAccordingToChoice(Menu menu) {
         menu.getOption(choice).menuOptionFunction();

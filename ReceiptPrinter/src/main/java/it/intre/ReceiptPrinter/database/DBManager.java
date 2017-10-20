@@ -6,15 +6,9 @@ import it.intre.ReceiptPrinter.models.Product;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.*;
-import java.util.Properties;
 import java.util.Scanner;
 
 public class DBManager {
-
-    /*public static void CloseConnectionToDB() {
-        ConnectionManager connSingleton = ConnectionManager.getConnectionSingleton();
-        connSingleton.CloseConnectionToDB();
-    }*/
 
     public static void viewTable(Connection conn)  {
 
@@ -55,7 +49,7 @@ public class DBManager {
             Category category =  Category.valueOf(rs.getString("category"));
             product = new Product(name,isImported,price,category,1);
         } catch (SQLException e ) {
-            System.err.println("ERROR! query NOT successfully completed");
+            System.out.println("ERROR! query NOT successfully completed");
         } finally {
             SQLExceptionHandling(stmt);
         }
@@ -120,5 +114,4 @@ public class DBManager {
             SQLExceptionHandling(stmt);
         }
     }
-
 }
