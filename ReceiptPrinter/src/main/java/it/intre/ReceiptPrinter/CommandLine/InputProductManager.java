@@ -20,6 +20,18 @@ public class InputProductManager {
         }while(other.equalsIgnoreCase("yes"));
     }
 
+    public void inputProductToReceiptFromCommandLine() {
+        String other;
+        Product product;
+        Receipt receipt = new Receipt();
+        do {
+            product = createProduct();
+            receipt.addNewProduct(product);
+            other = answerYesNo("Do you want to insert another product in the receipt? (yes/no)");
+        }while(other.equalsIgnoreCase("yes"));
+        receipt.printReceipt();
+    }
+
     private static Product createProduct() {
         Product product = new Product();
         product.setName(insertProductName());
