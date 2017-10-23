@@ -25,7 +25,7 @@ public class InputProductManager {
         Product product;
         Receipt receipt = new Receipt();
         do {
-            product = createProduct();
+            product = createProductReceipt();
             receipt.addNewProduct(product);
             other = answerYesNo("Do you want to insert another product in the receipt? (yes/no)");
         }while(other.equalsIgnoreCase("yes"));
@@ -38,6 +38,12 @@ public class InputProductManager {
         product.setImported(isProductImported());
         product.setPrice(insertProductPrice());
         product.setCategory(insertProductCategory());
+        return product;
+    }
+
+    private static Product createProductReceipt() {
+        Product product = createProduct();
+        product.setQuantity(insertProductQuantity());
         return product;
     }
 
@@ -109,6 +115,37 @@ public class InputProductManager {
         boolean check;
         if((number < 1)||(number > 5)) {
             System.out.println("ERROR! Invalid input! You must insert a number between 1 and 5");
+            check = false;
+        }
+        else {
+            check = true;
+        }
+        return check;
+    }
+
+    private static int insertProductQuantity() {
+        Scanner keyboard = new Scanner(System.in);
+        int quantity = 0;
+        boolean isInputValid;
+        do {
+            System.out.println("Insert the product quantity: ");
+            try{
+                quantity = keyboard.nextInt();
+            }catch(InputMismatchException e)
+            {
+                keyboard.nextLine();
+                quantity = -1;
+            }finally{
+                isInputValid = checkValidInputQuantity(quantity);
+            }
+        }while(!isInputValid);
+        return quantity;
+    }
+
+    public static boolean checkValidInputQuantity(int number) {
+        boolean check;
+        if(number < 1) {
+            System.out.println("ERROR! Invalid input! The quantity must be positive");
             check = false;
         }
         else {

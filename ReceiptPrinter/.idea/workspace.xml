@@ -17,21 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReceiptPrinter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/ReceiptPrinter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FetchProductManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/CommandLine/FetchProductManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="31" />
+            <state relative-caret-position="250">
+              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,8 +32,18 @@
       <file leaf-file-name="MenuManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/MenuManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="61" column="37" lean-forward="false" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+            <state relative-caret-position="278">
+              <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductsFromDBOutputTerminal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/ProductsFromDBOutputTerminal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -52,8 +52,8 @@
       <file leaf-file-name="InputProductManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/CommandLine/InputProductManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+            <state relative-caret-position="275">
+              <caret line="52" column="35" lean-forward="true" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,11 +61,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductsOutputTerminal.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/ProductsOutputTerminal.java">
+      <file leaf-file-name="InputProductManagerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/it/intre/ReceiptPrinter/InputProductManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="457">
+              <caret line="51" column="44" lean-forward="true" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/database/DBManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Menu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Receipt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Receipt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rounding.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/utilities/Rounding.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -126,10 +180,8 @@
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/items/Receipt.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/items/ConnectionSingleton.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/items/ConnectionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Receipt.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Category.java" />
         <option value="$PROJECT_DIR$/src/test/java/it/intre/ReceiptPrinter/CommandLine/InputProductManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/it/intre/ReceiptPrinter/InputProductManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/database/ConnectionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/CommandLine/MenuManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/IMenuOption.java" />
@@ -143,11 +195,13 @@
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/CommandLine/FetchProductManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/database/DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/ProductsFromDBOutputTerminal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Product.java" />
         <option value="$PROJECT_DIR$/src/test/java/it/intre/ReceiptPrinter/FetchProductManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/CommandLine/InputProductManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/ProductsOutputTerminal.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/ReceiptPrinter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Receipt.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/intre/ReceiptPrinter/InputProductManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/CommandLine/InputProductManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Product.java" />
       </list>
     </option>
   </component>
@@ -190,8 +244,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -342,81 +396,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.ReceiptPrinter">
-    <configuration name="FetchProductManagerTest.exceptionHandledOnInputIdProductReturnFalseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="it.intre.ReceiptPrinter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ReceiptPrinter" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="it.intre.ReceiptPrinter" />
-      <option name="MAIN_CLASS_NAME" value="it.intre.ReceiptPrinter.FetchProductManagerTest" />
-      <option name="METHOD_NAME" value="exceptionHandledOnInputIdProductReturnFalseTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="FetchProductManagerTest.inputNegativeIdProductReturnFalseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="it.intre.ReceiptPrinter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ReceiptPrinter" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="it.intre.ReceiptPrinter" />
-      <option name="MAIN_CLASS_NAME" value="it.intre.ReceiptPrinter.FetchProductManagerTest" />
-      <option name="METHOD_NAME" value="inputNegativeIdProductReturnFalseTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="FetchProductManagerTest.inputPositiveExistingIdProductReturnTrueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="it.intre.ReceiptPrinter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ReceiptPrinter" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="it.intre.ReceiptPrinter" />
-      <option name="MAIN_CLASS_NAME" value="it.intre.ReceiptPrinter.FetchProductManagerTest" />
-      <option name="METHOD_NAME" value="inputPositiveExistingIdProductReturnTrueTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="FetchProductManagerTest.inputPositiveNotExistingIdProductReturnFalseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -430,6 +409,81 @@
       <option name="PACKAGE_NAME" value="it.intre.ReceiptPrinter" />
       <option name="MAIN_CLASS_NAME" value="it.intre.ReceiptPrinter.FetchProductManagerTest" />
       <option name="METHOD_NAME" value="inputPositiveNotExistingIdProductReturnFalseTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="InputProductManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="it.intre.ReceiptPrinter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ReceiptPrinter" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="it.intre.ReceiptPrinter" />
+      <option name="MAIN_CLASS_NAME" value="it.intre.ReceiptPrinter.InputProductManagerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="InputProductManagerTest.inputCategoryNumberLessThan1ReturnFalseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="it.intre.ReceiptPrinter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ReceiptPrinter" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="it.intre.ReceiptPrinter" />
+      <option name="MAIN_CLASS_NAME" value="it.intre.ReceiptPrinter.InputProductManagerTest" />
+      <option name="METHOD_NAME" value="inputCategoryNumberLessThan1ReturnFalseTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="InputProductManagerTest.inputLessThan1QuantityReturnFalseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="it.intre.ReceiptPrinter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ReceiptPrinter" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="it.intre.ReceiptPrinter" />
+      <option name="MAIN_CLASS_NAME" value="it.intre.ReceiptPrinter.InputProductManagerTest" />
+      <option name="METHOD_NAME" value="inputLessThan1QuantityReturnFalseTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -544,18 +598,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.ReceiptPrinter" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.FetchProductManagerTest.exceptionHandledOnInputIdProductReturnFalseTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.FetchProductManagerTest.inputNegativeIdProductReturnFalseTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FetchProductManagerTest.inputPositiveExistingIdProductReturnTrueTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FetchProductManagerTest.inputPositiveNotExistingIdProductReturnFalseTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.FetchProductManagerTest.inputPositiveNotExistingIdProductReturnFalseTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.InputProductManagerTest.inputLessThan1QuantityReturnFalseTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.InputProductManagerTest.inputCategoryNumberLessThan1ReturnFalseTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.InputProductManagerTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.ReceiptPrinter" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FetchProductManagerTest.inputPositiveNotExistingIdProductReturnFalseTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FetchProductManagerTest.inputPositiveExistingIdProductReturnTrueTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FetchProductManagerTest.inputNegativeIdProductReturnFalseTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.FetchProductManagerTest.exceptionHandledOnInputIdProductReturnFalseTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.InputProductManagerTest.inputLessThan1QuantityReturnFalseTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.InputProductManagerTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InputProductManagerTest.inputCategoryNumberLessThan1ReturnFalseTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FetchProductManagerTest.inputPositiveNotExistingIdProductReturnFalseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -576,20 +630,20 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FetchProductManagerTest_exceptionHandledOnInputIdProductReturnFalseTest - 2017.10.20 at 11h 48m 20s.xml">
-      <configuration name="FetchProductManagerTest.exceptionHandledOnInputIdProductReturnFalseTest" configurationId="JUnit" />
+    <history-entry file="InputProductManagerTest - 2017.10.23 at 09h 39m 30s.xml">
+      <configuration name="InputProductManagerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FetchProductManagerTest_inputNegativeIdProductReturnFalseTest - 2017.10.20 at 11h 48m 28s.xml">
-      <configuration name="FetchProductManagerTest.inputNegativeIdProductReturnFalseTest" configurationId="JUnit" />
+    <history-entry file="InputProductManagerTest_inputCategoryNumberLessThan1ReturnFalseTest - 2017.10.23 at 09h 36m 35s.xml">
+      <configuration name="InputProductManagerTest.inputCategoryNumberLessThan1ReturnFalseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FetchProductManagerTest_inputPositiveExistingIdProductReturnTrueTest - 2017.10.20 at 11h 48m 35s.xml">
-      <configuration name="FetchProductManagerTest.inputPositiveExistingIdProductReturnTrueTest" configurationId="JUnit" />
+    <history-entry file="InputProductManagerTest_inputLessThan1QuantityReturnFalseTest - 2017.10.23 at 09h 36m 31s.xml">
+      <configuration name="InputProductManagerTest.inputLessThan1QuantityReturnFalseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FetchProductManagerTest_inputPositiveNotExistingIdProductReturnFalseTest - 2017.10.20 at 11h 48m 42s.xml">
-      <configuration name="FetchProductManagerTest.inputPositiveNotExistingIdProductReturnFalseTest" configurationId="JUnit" />
+    <history-entry file="InputProductManagerTest_inputLessThan1QuantityReturnFalseTest - 2017.10.23 at 09h 36m 40s.xml">
+      <configuration name="InputProductManagerTest.inputLessThan1QuantityReturnFalseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FetchProductManagerTest_inputPositiveNotExistingIdProductReturnFalseTest - 2017.10.20 at 11h 49m 58s.xml">
-      <configuration name="FetchProductManagerTest.inputPositiveNotExistingIdProductReturnFalseTest" configurationId="JUnit" />
+    <history-entry file="InputProductManagerTest_inputLessThan1QuantityReturnFalseTest - 2017.10.23 at 09h 41m 49s.xml">
+      <configuration name="InputProductManagerTest.inputLessThan1QuantityReturnFalseTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="InputProductManagerTest_inputNegativePriceOutputFalse - 2017.10.20 at 09h 59m 50s.xml">
       <configuration name="InputProductManagerTest.inputNegativePriceOutputFalse" configurationId="JUnit" />
@@ -618,6 +672,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1432" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -627,18 +682,18 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15830946" sideWeight="0.4919355" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36216217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3527027" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23638968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24355301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38513514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -850,14 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/ProductsFromDBOutputTerminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="63" lean-forward="false" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/CSVFileOutputTXTFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -879,64 +926,6 @@
         <state relative-caret-position="34">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="108" column="4" lean-forward="false" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Receipt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1643">
-          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/utilities/Rounding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/it/intre/ReceiptPrinter/InputProductManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/database/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="35" column="30" lean-forward="false" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -962,47 +951,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/CommandLine/FetchProductManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/ReceiptPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="51">
           <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/CommandLine/InputProductManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/MenuManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="61" column="37" lean-forward="false" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/ProductsOutputTerminal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/it/intre/ReceiptPrinter/InputProductManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="51" column="44" lean-forward="true" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/utilities/Rounding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/CommandLine/InputProductManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="52" column="35" lean-forward="true" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Receipt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/models/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/MenuManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/Menu/ProductsFromDBOutputTerminal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/CommandLine/FetchProductManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/intre/ReceiptPrinter/database/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

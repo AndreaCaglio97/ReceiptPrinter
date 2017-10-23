@@ -19,7 +19,7 @@ public class Product {
     }
 
     public Product() {
-        this(null,false,0,Category.GENERAL,0);
+        this(null,false,0,Category.GENERAL,1);
     }
 
     public void setName(String name) {
@@ -73,10 +73,7 @@ public class Product {
         {
             taxPercentage += 5;
         }
-        if(taxPercentage != 0)
-        {
-            taxAmount = calculationOfPriceAndTaxAmount(taxPercentage);
-        }
+        taxAmount = calculationOfPriceAndTaxAmount(taxPercentage);
         return taxAmount;
     }
 

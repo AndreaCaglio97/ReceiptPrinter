@@ -46,7 +46,7 @@ public class Receipt {
         }
         System.out.println();
         System.out.println("Total taxes: " + String.format( "%.2f", taxAmount ) + "€");
-        System.out.println("Total:" + String.format( "%.2f", total ) + "€");
+        System.out.println("Total: " + String.format( "%.2f", total ) + "€");
     }
 
     public void readProductFromFileCSV(String fileName) {

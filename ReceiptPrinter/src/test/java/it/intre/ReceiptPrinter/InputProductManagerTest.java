@@ -23,6 +23,11 @@ public class InputProductManagerTest {
     }
 
     @Test
+    public void inputExceptionPriceReturnFalseTest() {
+        assertFalse(checkValidInputPrice(-1));
+    }
+
+    @Test
     public void inputCategoryNumberBetween1And5ReturnTrueTest() {
         assertTrue(checkValidInputCategory(3));
     }
@@ -37,4 +42,23 @@ public class InputProductManagerTest {
         assertFalse(checkValidInputCategory(0));
     }
 
+    @Test
+    public void inputExceptionCategoryNumberReturnFalseTest() {
+        assertFalse(checkValidInputCategory(-1));
+    }
+
+    @Test
+    public void inputLessThan1QuantityReturnFalseTest() {
+        assertFalse(checkValidInputQuantity(0));
+    }
+
+    @Test
+    public void inputPositiveQuantityReturnTrueTest() {
+        assertTrue(checkValidInputQuantity(10));
+    }
+
+    @Test
+    public void inputExceptionQuantityReturnFalseTest() {
+        assertFalse(checkValidInputQuantity(-1));
+    }
 }
